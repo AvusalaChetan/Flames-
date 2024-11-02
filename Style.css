@@ -1,0 +1,216 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    text-transform: capitalize;
+  }
+  :root {
+    --yellowcolor: #e5f041e6; 
+    --whitecolor:#fff;
+}
+
+  .container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70vw;
+  
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 46px;
+    background-image: url("H1img.png");
+    background-size: 400px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1.4px solid #6fe36f;
+    border-style: none none solid solid;
+    border-radius: 5px;
+
+  }
+  input:focus {
+    outline: none;
+    border: 1px solid gray;
+  }
+
+  #btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: var(--whitecolor);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #e65c50;
+  }
+
+  #result {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #333;
+    text-align: left;
+
+  }
+  footer {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 7px;
+    width: 100%;
+  }
+/* toggle dark light theme*/ 
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  right: -32vw;
+  top: 5vh;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #20262c;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #ececd9, -4px 1px 4px 0px #dadada;
+  background: var(--background);
+  transition: 0.5s;
+}
+
+.decoration {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  right: 20%;
+  top: 15%;
+  background: var(--yellowcolor);
+  backdrop-filter: blur(10px);
+  transition: all 0.5s;
+  box-shadow: -7px 10px 0 var(--yellowcolor), 8px 15px 0 var(--yellowcolor), -17px 1px 0 var(--yellowcolor),
+    -20px 10px 0 var(--yellowcolor), -7px 23px 0 var(--yellowcolor), -15px 25px 0 var(--yellowcolor);
+}
+
+input:checked ~ .decoration {
+  transform: translateX(-20px);
+  width: 10px;
+  height: 10px;
+  background: var(--whitecolor);
+  box-shadow: -12px 0 0 var(--whitecolor), -6px 0 0 1.6px var(--whitecolor), 5px 15px 0 1px var(--whitecolor),
+    1px 17px 0 var(--whitecolor), 10px 17px 0 var(--whitecolor);
+}
+
+input:checked + .slider {
+  background-color: #5494de;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #efdf2b, 0 0 10px 0px #efdf2b;
+}
+/*toggle design ends*/
+
+/* Dark theme styles */
+.dark-theme {
+  color: #fff; 
+  background-color: #333; 
+}
+.dark-theme #btn {
+  background-color: #444; 
+  color: #fff; 
+  border: 1px solid ;
+  border-style: none none solid none; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+.dark-theme button:hover {
+  background-color: #555; /* Darker background on hover */
+}
+
+.dark-theme input{
+  background-color: #444; 
+  color: #fff; 
+  border: 1px solid #fff; 
+  border-style: none none solid none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dark-theme input::placeholder {
+  color: #aaa; 
+}
+
+.dark-theme h1{
+  color: #fff;
+}
+.dark-theme #result{
+  color: #fff;
+}
+.dark-theme .card 
+  background-color: #444;
+  border-radius: 8px;
+  padding: 20px; 
+  box-shadow: 0 20px 4px rgba(0,0,0,0.5) 
+}
