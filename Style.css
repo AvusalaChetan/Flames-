@@ -30,10 +30,7 @@ form {
 }
 h1 {
   font-size: 46px;
-  background-image: url("H1img.png");
   background-size: 400px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 label {
